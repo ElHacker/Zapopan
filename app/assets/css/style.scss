@@ -322,6 +322,11 @@ $brandColor: tomato;
 	}
 }
 
+.wrapper-items {
+	display: inline-block;
+	margin-left: 40px;
+}
+
 .libraries {
 	background: #67a7a3;
 	padding: 20px 10px;
@@ -346,10 +351,26 @@ $brandColor: tomato;
 		left: 25%;
 	}
 	
-	.items {
+	#view-library {
+		background: $yellow;
+		padding: 15px 30px;
+		border-radius: 5px;
+		color: #fff;
+		width: 140px;
 		display: inline-block;
+		text-align: center;
+			
+		&:after {
+			content: url(arrow.png);
+			display: inline-block;
+			position: relative;
+			top: 7px;
+			right: -9px;
+		}
+	}
+
+	.items {
 		vertical-align: top;
-		margin-left: 40px;
 		height: 400px;
 		overflow: scroll;
 		position: relative;
@@ -377,6 +398,8 @@ $brandColor: tomato;
 		left: 100px;
 		border: 8px solid rgba(0,0,0,0.2);
 		border-radius: 3px;
+		vertical-align: top;
+
 		.library-title {
 			vertical-align: top;
 		}
@@ -419,7 +442,20 @@ $brandColor: tomato;
 		}
 	}
 
-	.library-info {
+
+	.library-map {
+		display: inline-block;
+		border: 8px solid rgba(0,0,0,0.2);
+		color: #000;
+		text-shadow: none;
+
+		#map-canvas {
+			width: 400px;
+			height: 400px;
+		}
+	}
+
+	.library-info-container {
 		width: 100%;
 		display: inline-block;
 		padding: 50px;
@@ -428,6 +464,10 @@ $brandColor: tomato;
 		color: #fff;
 		text-shadow: 0px 2px 1px rgba(0,0,0,0.5);
 
+		.library-info {
+			display: inline-block;
+			vertical-align: top;
+		}
 		span {
 			color: rgba(0,0,0,0.5);
 			display: block;
