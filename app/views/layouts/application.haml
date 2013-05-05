@@ -9,9 +9,10 @@
 	%body
 		.nav
 			.container
-				= link_to "Libroteca"
-				= image_tag "logo-zapopan.png"
+				= link_to root_path do 
+					= image_tag "logo.png"
 				%nav
 					= link_to "Libros"
 					= link_to "Bibliotecas"
+					= image_tag "logo-zapopan.png", class: 'zapopan-logo'
 		= yield

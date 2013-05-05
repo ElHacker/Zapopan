@@ -1,34 +1,33 @@
 .container
   .bookview
-    %img.book-cover
+    .book-cover
     .book-info
-      %p
-        %b Title:
+      %span.title
         = @book.title
-      %p
-        %b Author:
+      %span.author
         = @book.author
-      %p
-        %b Publication date:
+      %span.date
         = @book.publication_date
-      %p
-        %b Editorial:
+      %span.editorial
         = @book.editorial
-      %p
-        %b Edition:
+      %span.edition
         = @book.edition
-      %p
-        %b Isbn:
+      %span.isbn
         = @book.isbn
+    .social
+      %a{:href => "#{}"}
+        =image_tag  "facebook.png"
+      %a{:href => "#{}"}
+        =image_tag  "twitter.png"
   .libraries
-    %h3 Este libro esta disponible en las siguientes bibliotecas
+    %h3 Este libro esta disponible en las siguientes bibliotecas:
+    %br
     .items
       - @book.libraries.each do |library|-
         = link_to '#', data: {address: library.google_address}, class: 'library-item' do
           %span.library-title #{library.name}
     .library-map
       #map-canvas{style:"width:400px; height:400px;"}
-
   = link_to 'Edit', edit_book_path(@book)
   |
   \#{link_to 'Back', books_path}

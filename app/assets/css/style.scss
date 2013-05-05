@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700);
 
 
-$yellow: #f1c40f;
-$dark-color: #0e2236;
+$yellow: #f39c12;
+$dark-color: #252525;
 
 * {
 	margin: 0px;
@@ -29,7 +29,18 @@ $brandColor: tomato;
 .featured {
 	background: #f5f1d8;
 	padding: 20px 0px;
+
+	.sub-title {
+		color: #da6c4f;
+		position: relative;
+		top: -20px;
+	}
 }
+
+.current {
+	opacity: 0.5;
+}
+
 .nav {
 	padding: 20px;
 	background: $dark-color;
@@ -39,12 +50,25 @@ $brandColor: tomato;
 		color: #fff;
 	}
 
+	.zapopan-logo {
+		opacity: 0.2;
+		display: inline-block;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
 	nav {
 		display: inline-block;
 		float: right;
 		a {
 			color: #fff;
-			margin-left: 5px;
+			margin-left: 10px;
+			position: relative;
+			top: 40px;
+			background: rgba(255,255,255,0.1);
+			padding: 10px;
+			border-radius: 3px;
 		}
 	}
 }
@@ -100,7 +124,8 @@ $brandColor: tomato;
 	margin: 0 auto;
 	li {
 		.tag {
-			padding: 10px;
+			padding: 20px;
+			margin-left: 10px;
 			color: #000;
 			background: #ecf0f1;
 			border-radius: 2px;
@@ -118,8 +143,12 @@ $brandColor: tomato;
 	margin: 30px auto;
 	width: 800px;
 	display: block;
+
+	a {
+		color: #000;
+	}
 	.book {
-		background: $yellow;
+		background: #2a3247;
 		width: 135px;
 		height: 200px;
 		display: inline-block;
@@ -149,9 +178,13 @@ $brandColor: tomato;
 	margin: -50px auto !important;
 	width: 800px;
 
+	span {
+		color: #fff;
+	}
+
 	.more-books {
 		.book {
-			background: tomato;
+			background: #9daebd;
 		}
 	}
 }
@@ -170,12 +203,18 @@ $brandColor: tomato;
 
 	h3 {
 		display: inline-block;
+		font-weight: 300;
+		font-size: 2em;
+		position: relative;
+		top: 10px;
+		padding-left: 35px;
 	}
 
 	.tags {
 		background: #fff;
 		padding: 5px;
 		margin: 0px 10px;
+		border-radius: 5px;
 	}
 	
 	&:after {
@@ -188,7 +227,7 @@ $brandColor: tomato;
 		-webkit-transform:rotate(45deg);
 		-moz-transform:rotate(45deg);
 		transform:rotate(45deg);
-		left: 50%;
+		left: 49%;
 		position: relative;
 		top: 20px;
 	}
@@ -196,14 +235,22 @@ $brandColor: tomato;
 
 
 .book-cover {
-	width: 150px;
-	height: 200px;
+	background: #2a3247;
+	width: 100px;
+	height: 150px;
 	display: inline-block;
+	border-left: 15px solid black;
+	border-radius: 3px;
+	box-shadow: inset 0px 2px 0px  rgba(255,255,255,0.4);
+	padding: 10px;
+	position: relative;
+	margin-left: 20px;
+	vertical-align: top;
 }
 
 .booklist {
-	width: 885px;
-	margin: 0px auto;
+	width: 930px;
+	margin: 20px auto;
 	.book-item {
 		display: inline-block;
 		width: 400px;
@@ -211,33 +258,68 @@ $brandColor: tomato;
 		background: #fff;
 		vertical-align: top;
 		height: 200px;
-		margin-top: 10px;
-		box-shadow: 0px 2px 1px rgba(0,0,0,0.2);
+		margin: 15px 10px;
+		border-radius: 5px;
+		box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
 
 		.book-info {
-			width: 200px;
+			width: 220px;
 			display: inline-block;
 			vertical-align: top;
 			margin-left: 10px;
+
 			.findbutton {
 				background: #67b1ac ;
 				color: #fff;
-				display: block;
-				width: 120px;
-				padding: 15px 5px;
+				width: 180px;
+				padding: 15px 25px;
 				border-radius: 5px;
 				text-align: center;
+
+				&:after {
+					content: url(arrow.png);
+					display: inline-block;
+					position: relative;
+					top: 7px;
+					right: -9px;
+				}
+
+				&:hover {
+					opacity: 0.8;
+				}
 			}
 		}
 	}
 }
 
+.social {
+	display: inline-block;
+	float: right;
+}
+
 .bookview {
 	background: #fff;
-	padding: 10px;
+	padding: 80px;
+
 	.book-info {
 		display: inline-block;
 		vertical-align: top;
+		margin-left: 10px;
+		width: 200px;
+		color: #252525;
+	}
+
+	span {
+		display: block;
+	}
+	.title {
+		font-size: 3em;
+		font-weight: 700;
+	}
+
+	.author {
+		font-style: italic;
+		font-size: 1.5em;
 	}
 }
 
@@ -248,6 +330,9 @@ $brandColor: tomato;
 	h3 {
 		color: #fff;
 		font-weight: 300;
+		text-shadow: 0px 2px 1px rgba(0,0,0,0.5);
+		font-size: 2em;
+		padding-left: 40px;
 	}
 
 	&:before {
@@ -264,19 +349,34 @@ $brandColor: tomato;
 	
 	.items {
 		display: inline-block;
+		vertical-align: top;
+		margin-left: 40px;
+
 		.library-item {
-			padding: 10px 5px;
+			padding: 20px 5px;
 			background: #ecf0f1;
 			width: 300px;
 			display: block;
 			margin-top: 10px;
 			border-radius: 3px;
 			color: $dark-color;
+
+			&:after {
+				content:url(books.png);
+				float: right;
+			}
 		}
 	}
 
 	.library-map {
 		display: inline-block;
+		position: relative;
+		left: 100px;
+		border: 8px solid rgba(0,0,0,0.2);
+		border-radius: 3px;
+		.library-title {
+			vertical-align: top;
+		}
 	}
 }
 
