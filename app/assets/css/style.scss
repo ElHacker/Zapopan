@@ -380,6 +380,75 @@ $brandColor: tomato;
 	}
 }
 
+.library-profile {
+
+	.photo-library {
+		height: 400px;
+		overflow: hidden;
+		position: relative;
+
+		.library-name {
+			color: #fff;
+			position: absolute;
+			font-size: 3em;
+			background: rgba(0,0,0,0.7);
+			padding: 20px;
+			margin-top: 50px;
+			display: block;
+
+		}
+		.adress {
+			color: #fff;
+			position: absolute;
+			font-size: 1.5em;
+			background: rgba(0,0,0,0.5);
+			padding: 20px;
+			display: block;
+			margin-top: 153px;
+			font-weight: 300;
+
+			&:before {
+				content:url(geotag.png);
+				position: relative;
+				top: 15px;
+				margin-right: 10px;
+			}
+		}
+	}
+
+	.library-info {
+		width: 100%;
+		display: inline-block;
+		padding: 50px;
+		background: #67a7a3;
+		font-size: 1.3em;
+		color: #fff;
+		text-shadow: 0px 2px 1px rgba(0,0,0,0.5);
+
+		span {
+			color: rgba(0,0,0,0.5);
+			display: block;
+			font-weight: bold;
+			text-shadow: 0px 2px 1px rgba(255,255,255,0.2);
+		}
+
+		&:before {
+			content: '';
+			width: 30px;
+			height: 30px;
+			display: block;
+			background:#67a7a3;	
+			-webkit-transform: rotate(45deg);
+			position: relative;
+			top: -60px;
+			left: 25%;
+		}
+	}
+
+	.recent-books {
+	}
+}
+
 @-webkit-keyframes show {
 	from {opacity: 0;}
 	to {opacity: 1;}
