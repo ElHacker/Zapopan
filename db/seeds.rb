@@ -60,7 +60,7 @@ book3 = Book.new title: 'Don Quijote', author: 'Museo de Santa Cruz', editorial:
 book3.libraries << Library.find(3)
 book3.save
 
-book4 = Book.new title: 'Cien años de soledad', author: 'Gabriel Garcia Marquez', editorial: 'Vintage EspaÃ±ol', isbn: '0307474720', publication_date:'2009', tag_list: 'drama'
+book4 = Book.new title: 'Cien años de soledad', author: 'Gabriel Garcia Marquez', editorial: 'Vintage Español', isbn: '0307474720', publication_date:'2009', tag_list: 'drama'
 book4.libraries << Library.find(4)
 book4.save
 
