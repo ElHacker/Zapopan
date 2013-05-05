@@ -141,7 +141,6 @@ $brandColor: tomato;
 
 .books {
 	margin: 30px auto;
-	width: 800px;
 	display: block;
 
 	a {
@@ -449,6 +448,44 @@ $brandColor: tomato;
 	}
 }
 
+.book-form {
+	h1 {
+		background: #67a7a3;
+		padding: 50px;
+		color: #fff;
+		text-shadow: 0px 2px 1px rgba(0,0,0,0.5);
+	}
+
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	background: #fff;
+	box-shadow: 0px 0px 40px rgba(0,0,0,0.1);
+
+	input {
+		padding: 20px;
+		border-radius: 5px;
+		margin: 10px 0px;
+		font-size: 1.2em;
+
+		&:focus {
+			border: 5px solid $yellow;
+			outline: none;
+		}
+	}
+
+	input[type="submit"] {
+		background: $yellow;
+		border: 0px;
+		color: #fff;
+		font-weight: bold;
+		text-shadow: 0px 2px 1px rgba(0,0,0,0.5);
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
 @-webkit-keyframes show {
 	from {opacity: 0;}
 	to {opacity: 1;}
