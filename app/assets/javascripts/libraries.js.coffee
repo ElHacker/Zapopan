@@ -21,4 +21,5 @@ $(document).ready () ->
         infoWindow = new google.maps.InfoWindow({content:content}).open(map, marker)
 
   library_profile = $('.library-profile').data()
-  codeAddress(library_profile.name, library_profile.address)
+  if library_profile
+    codeAddress(library_profile.name, library_profile.address)
