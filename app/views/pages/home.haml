@@ -1,59 +1,49 @@
 %section.head
-	%h1.head-quote
-		Libros de:
-		%span#msg
-	%ul.bxslider
-		%li
-			%span.tag Romance
-			%span.tag Drama
-			%span.tag Fantasía
-			%span.tag Ciencia Ficción
-			%span.tag Terror
-			%br
-			%br
-			%br
-			%br
-			%span.tag Viajes
-			%span.tag Infantil
-			%span.tag Politica
-			%span.tag Humor
-			%span.tag Terror
-		%li
-			%span.tag Romance
-			%span.tag Drama
-			%span.tag Fantasía
-			%span.tag Ciencia Ficción
-			%span.tag Terror
-			%br
-			%br
-			%br
-			%span.tag Viajes
-			%span.tag Infantil
-			%span.tag Politica
-			%span.tag Humor
-			%span.tag Terror
-		%li
-			.books.recomendations
-				%a.more-books
-					.book
-						%span.title Ver más
-	%a.search-link{:href => ""} o busca un libro o tema en específico
-	%section.bar 
-		%span Lo mas vistos
-	.featured
-		%section.books
-			.book
-				%span.title El mejor libro del mundo.
-				%span.author Bethoven 
-			.book
-				%span.title El mejor libro del mundo.
-				%span.author Bethoven S
-			.book
-				%span.title El mejor libro del mundo.
-				%span.author Bethoven S
-			.book
-				%span.title El mejor libro del mundo.
-				%span.author Bethoven S
+  %h1.head-quote
+    Libros de:
+    %span#msg
+  %ul.bxslider
+    %li
+      %span.tag Romance
+      %span.tag Drama
+      %span.tag Fantasía
+      %span.tag Ciencia Ficción
+      %span.tag Terror
+      %br
+      %br
+      %br
+      %br
+      %span.tag Viajes
+      %span.tag Infantil
+      %span.tag Politica
+      %span.tag Humor
+      %span.tag Terror
+    %li
+      %span.tag Romance
+      %span.tag Drama
+      %span.tag Fantasía
+      %span.tag Ciencia Ficción
+      %span.tag Terror
+      %br
+      %br
+      %br
+      %span.tag Viajes
+      %span.tag Infantil
+      %span.tag Politica
+      %span.tag Humor
+      %span.tag Terror
+    %li
+      .books.recomendations
+        %a.more-books
+          .book
+            %span.title Ver más
+  %a.search-link{:href => ""} o busca un libro o tema en específico
+  %section.bar
+    %span Lo mas vistos
+  .featured
+    %section.books
+      - @top_books.each do |book|
+        .book
+          %span.title= book.title
+          %span.author= book.author
 
-
-	
