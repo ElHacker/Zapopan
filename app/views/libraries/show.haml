@@ -1,28 +1,29 @@
-.library-profile
-	.photo-library
-		%h2.library-name= @library.name
-		%span.adress= @library.address
-		= image_tag "biblioteca-1.jpg"
-	.library-info
-		.container
-			%span Información:
-			%b Código:
-			= @library.code
-			%br
-			%b Encargado:
-			= @library.attendant
-			%br
-			%b Phone number:
-			= @library.phone_number
-			%br
-			%b Zone:
-			= @library.zone
-		.map
+.library-profile{"data-name" => @library.name, "data-address" => @library.google_address}
+  .photo-library
+    %h2.library-name= @library.name
+    %span.adress= @library.address
+    = image_tag "biblioteca-1.jpg"
+  .library-info
+    .container
+      %span Información:
+      %b Código:
+      = @library.code
+      %br
+      %b Encargado:
+      = @library.attendant
+      %br
+      %b Phone number:
+      = @library.phone_number
+      %br
+      %b Zone:
+      = @library.zone
+    .library-map
+      #map-canvas{style:"width:400px; height:400px;"}
 .recent-books.books
-	.container
-		.book
-			%span.title El mejor libro del mundo.
-			%span.author Bethoven 
-		.book
-			%span.title El mejor libro del mundo.
-			%span.author Bethoven 
+  .container
+    - @library.books.each do |book|
+      .book
+        %span.title= book.title
+        %span.author= book.author
+
+= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCHMJp2-XbvDl_1E1zHuOUglT8vjVCNgVA&sensor=false"
