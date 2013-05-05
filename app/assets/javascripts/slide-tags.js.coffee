@@ -10,8 +10,8 @@ $(document).ready ->
   searchBooks = (paramTags) ->
     searchURL = "books/search_with_tags.json"
     $.get(searchURL, tags: paramTags, (books, textStatus, jqXHR) ->
-      book_template = (title, author) -> """
-        <a>
+      book_template = (id, title, author) -> """
+        <a href='books/#{id}'>
           <div class="book">
             <span class="title">#{title}</span>
             <span class="author">#{author}</span>
@@ -21,7 +21,7 @@ $(document).ready ->
       book_list_html = ""
       for book, index in books
         if index < 3
-          book_list_html += book_template(book.title, book.author)
+          book_list_html += book_template(book.id, book.title, book.author)
         else
           # TODO: not cool
           break
@@ -43,7 +43,7 @@ $(document).ready ->
       # Second time
       tagMsg = prevMsg + tagName
       searchBooks(paramTags)
-    
+
     $("#msg").text tagMsg
     $(".more-books").attr("href", "books/search_with_tags?tags=#{paramTags}")
     slider.goToNextSlide()
