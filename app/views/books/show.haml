@@ -20,14 +20,17 @@
       %a{:href => "#{}"}
         =image_tag  "twitter.png"
   .libraries
-    %h3 Este libro esta disponible en las siguientes bibliotecas:
+    %h3
+      Este libro esta
+      %b disponible
+      en las siguientes bibliotecas:
     %br
     .wrapper-items
       .items
         - @book.libraries.each do |library|
           = link_to '#', data: { address: library.google_address, id:library.id }, class: 'library-item' do
             %span.library-title #{library.name}
-      %a#view-library{:href => "#"} Ver Biblioteca     
+      %a#view-library{:href => "#"} Ver Biblioteca
     .library-map
       #map-canvas{style:"width:400px; height:400px;"}
   .fb-comments{"data-href" => "http://donde-leer.herokuapp.com/", "data-num-posts" => "10", "data-width" => "960"}
