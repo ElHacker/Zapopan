@@ -17,7 +17,8 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.new(params[:book])
+    @book = Book.find_or_initialize_by_isbn(params[:book])
+    @book.libraries << Library.first
     if @book.save
       redirect_to @book, notice:'Book was successfully created.'
     else
