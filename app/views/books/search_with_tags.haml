@@ -1,0 +1,24 @@
+.head-list
+  .container
+    %h3.head-quote Recomendación de libros de 
+    %h3.tags= @tags
+.booklist
+  - @books.each do |book|
+    %article.book-item
+      %img.book-cover
+        .book-info
+          %h2.title= book.title
+          %br
+          %span.autor
+            %b Autor:
+            = book.author
+          %br
+          %span.editorial
+            %b Editorial:
+            = book.editorial
+          %br
+          %span.edicion= book.edition
+          %br
+          %a.findbutton{:href => "#"} Encontrar libro 
+%br/
+= link_to 'New Book', new_book_path

@@ -2,10 +2,12 @@
 
 
 $yellow: #f1c40f;
-$dark-color: #252525;
+$dark-color: #0e2236;
+
 * {
 	margin: 0px;
 	padding: 0px;
+	-webkit-animation: show .4s ease;
 }
 
 body {
@@ -25,12 +27,12 @@ $brandColor: tomato;
 }
 
 .featured {
-	background: #e5dfb5;
+	background: #f5f1d8;
 	padding: 20px 0px;
 }
 .nav {
 	padding: 20px;
-	background: #e74c3c;
+	background: $dark-color;
 
 	.logo {
 		display: inline-block;
@@ -47,10 +49,10 @@ $brandColor: tomato;
 	}
 }
 .head {
-	background: url(../img/bg-home.jpg) no-repeat top center;
+	background: url(bg-home.jpg) no-repeat top center;
 	background-position: 0px -250px;
 	width: 100%;
-	height: 400px;
+	height: 450px;
 	text-align: center;
 	text-shadow: 0px 2px 1px solid rgba(0,0,0,0.5);
 
@@ -85,10 +87,12 @@ $brandColor: tomato;
 		}
 	}
 
-	a {
+	 .search-link {
 		color: #fff;
 		text-decoration: underline;
-		font-weight: 300;
+		font-weight: 400;
+		position: relative;
+		top: 24px;
 	}
 }
 
@@ -115,7 +119,7 @@ $brandColor: tomato;
 	width: 800px;
 	display: block;
 	.book {
-		background: #2c3e50;
+		background: $yellow;
 		width: 135px;
 		height: 200px;
 		display: inline-block;
@@ -125,6 +129,7 @@ $brandColor: tomato;
 		padding: 10px;
 		position: relative;
   		margin-left: 20px;
+  		vertical-align: top;
 
   		&:hover {
   			-webkit-transform:rotate(5deg);
@@ -141,42 +146,141 @@ $brandColor: tomato;
 }
 
 .books.recomendations {
-	margin: -70px auto !important;
+	margin: -50px auto !important;
 	width: 800px;
+
+	.more-books {
+		.book {
+			background: tomato;
+		}
+	}
 }
 
 .bar {
 	background: $dark-color;
 	padding: 20px 0px;
 	color: #fff;
+	margin-top: 40px;
 }
 
-.bookslist {
-	margin: 0px auto;
-	width: 800px;
-	
-	.book {
-		background: tomato;
-		width: 135px;
-		height: 200px;
-		display: inline-block;
-		border-left: 15px solid black;
-		border-radius: 3px;
-		box-shadow: inset 0px 2px 0px  rgba(255,255,255,0.4);
-		padding: 10px;
-		position: relative;
-  		margin-left: 20px;
+.head-list {
+	padding: 10px;
+	background: $yellow;
+	position: relative;
 
-  		&:hover {
-  			-webkit-transform:rotate(5deg);
-  			cursor: pointer;
-  		}
-  		
-  		.title {
-  			color: rgba(255,255,255,0.8);
-  			text-shadow: 0px 2px 2px rgba(0,0,0,0.3);
-  			display: block;
-  			padding-top: 50px;
+	h3 {
+		display: inline-block;
+	}
+
+	.tags {
+		background: #fff;
+		padding: 5px;
+		margin: 0px 10px;
+	}
+	
+	&:after {
+		content:'';
+		width: 20px;
+		height: 20px;
+		background: $yellow;
+		display: block;
+		position: absolute;
+		-webkit-transform:rotate(45deg);
+		-moz-transform:rotate(45deg);
+		transform:rotate(45deg);
+		left: 50%;
+		position: relative;
+		top: 20px;
+	}
+}
+
+
+.book-cover {
+	width: 150px;
+	height: 200px;
+	display: inline-block;
+}
+
+.booklist {
+	width: 885px;
+	margin: 0px auto;
+	.book-item {
+		display: inline-block;
+		width: 400px;
+		padding: 20px;
+		background: #fff;
+		vertical-align: top;
+		height: 200px;
+		margin-top: 10px;
+		box-shadow: 0px 2px 1px rgba(0,0,0,0.2);
+
+		.book-info {
+			width: 200px;
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 10px;
+			.findbutton {
+				background: #67b1ac ;
+				color: #fff;
+				display: block;
+				width: 120px;
+				padding: 15px 5px;
+				border-radius: 5px;
+				text-align: center;
+			}
 		}
 	}
+}
+
+.bookview {
+	background: #fff;
+	padding: 10px;
+	.book-info {
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+.libraries {
+	background: #67a7a3;
+	padding: 20px 10px;
+
+	h3 {
+		color: #fff;
+		font-weight: 300;
+	}
+
+	&:before {
+		content: '';
+		width: 30px;
+		height: 30px;
+		display: block;
+		background: #67a7a3;	
+		-webkit-transform: rotate(45deg);
+		position: relative;
+		top: -35px;
+		left: 25%;
+	}
+	
+	.items {
+		display: inline-block;
+		.library-item {
+			padding: 10px 5px;
+			background: #ecf0f1;
+			width: 300px;
+			display: block;
+			margin-top: 10px;
+			border-radius: 3px;
+			color: $dark-color;
+		}
+	}
+
+	.library-map {
+		display: inline-block;
+	}
+}
+
+@-webkit-keyframes show {
+	from {opacity: 0;}
+	to {opacity: 1;}
 }
