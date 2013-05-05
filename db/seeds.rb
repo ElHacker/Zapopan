@@ -46,7 +46,7 @@ Library.create code: 6884, name: ' Tuzania', phone_number: '38 36 92 33', addres
 
 Library.create code: 7443, name: ' Venta Del Astillero', phone_number: '31 51 11 32', attendant: 'Antonia Lemus Fourtul', address: 'Hidalgo Esquina Emiliano Zapata Frente A La Del. De La Venta', zone: 'norte', email: 'ventaastillero@dondeleer.mx', password: '1234568', google_address: 'Biblioteca de la Venta del Astillero, Emiliano Zapata esq. Agustín Yáñez Sn, Venta del Astillero, 45220 Zapopan, Jalisco, Mexico'
 
-book1 = Book.new title: 'El principito', author: 'Antoine de Saint-Exupery', editorial: 'Emece', isbn: '9500400480', publication_date:'', tag_list: 'infantil, fantasía'
+book1 = Book.new title: 'El principito', author: 'Antoine de Saint-Exupéry', editorial: 'Emece', isbn: '9500400480', publication_date:'', tag_list: 'infantil, fantasía'
 book1.libraries << Library.find(1)
 book1.libraries << Library.find(2)
 book1.libraries << Library.find(3)
@@ -60,7 +60,7 @@ book3 = Book.new title: 'Don Quijote', author: 'Museo de Santa Cruz', editorial:
 book3.libraries << Library.find(3)
 book3.save
 
-book4 = Book.new title: 'Cien aÃ±os de soledad', author: 'Gabriel Garcia Marquez', editorial: 'Vintage EspaÃ±ol', isbn: '0307474720', publication_date:'2009', tag_list: 'drama'
+book4 = Book.new title: 'Cien años de soledad', author: 'Gabriel Garcia Marquez', editorial: 'Vintage EspaÃ±ol', isbn: '0307474720', publication_date:'2009', tag_list: 'drama'
 book4.libraries << Library.find(4)
 book4.save
 
