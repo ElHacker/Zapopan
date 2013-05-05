@@ -26,9 +26,11 @@ $(document).ready( () ->
     $('.library-item').removeClass('current')
     $(this).addClass('current')
     libraryName = $(this).find(".library-title").html()
-    console.log libraryName
     address = $(this).data("address")
+    libraryId = $(this).data("id")
+    console.log libraryId
     codeAddress(libraryName, address)
+    $('#view-library').attr("href", "/libraries/#{libraryId}")
 
   $('.library-item').eq(0).click()
 )

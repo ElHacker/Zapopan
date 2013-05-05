@@ -24,7 +24,7 @@
     %br
     .items
       - @book.libraries.each do |library|
-        = link_to '#', data: {address: library.google_address}, class: 'library-item' do
+        = link_to '#', data: { address: library.google_address, id:library.id }, class: 'library-item' do
           %span.library-title #{library.name}
     %a#view-library{:href => "#"} Ver Biblioteca
     .library-map
