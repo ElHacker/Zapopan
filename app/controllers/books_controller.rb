@@ -41,4 +41,9 @@ class BooksController < ApplicationController
 
     redirect_to books_url
   end
+
+  def isbn_lookup
+    @book = Book.get_open_library_data(params[:isbn])
+    render json: @book
+  end
 end

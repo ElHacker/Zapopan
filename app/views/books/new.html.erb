@@ -1,5 +1,8 @@
 <h1>New book</h1>
-
+<%= form_tag isbn_lookup_books_path, remote: true, id:'isbn_lookup' do %>
+  <%= text_field_tag 'isbn', nil, placeholder: 'ISBN'%>
+  <%= submit_tag('Completar por ISBN')%>
+<% end %>
 <%= render 'form' %>
 
 <%= link_to 'Back', books_path %>
