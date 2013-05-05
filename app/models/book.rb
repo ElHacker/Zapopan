@@ -2,7 +2,9 @@ require 'openlibrary'
 
 class Book < ActiveRecord::Base
 
-  attr_accessible :author, :edition, :editorial, :isbn, :publication_date, :title
+  attr_accessible :author, :edition, :editorial, :isbn, :publication_date, :title, :tag_list
+  # Alias for acts_as_taggable "tags"
+  acts_as_taggable
 
   def self.get_open_library_data(isbn)
     data = Openlibrary::Data
