@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20130504232003) do
   create_table "books", :force => true do |t|
     t.string   "title"
     t.string   "author"
-    t.datetime "publication_date"
+    t.string   "publication_date"
     t.string   "editorial"
     t.string   "edition"
     t.string   "isbn"
