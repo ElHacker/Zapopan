@@ -1,0 +1,33 @@
+<h1>Listing libraries</h1>
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Attendant</th>
+    <th>Phone number</th>
+    <th>Address</th>
+    <th>Zone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @libraries.each do |library| %>
+  <tr>
+    <td><%= library.code %></td>
+    <td><%= library.name %></td>
+    <td><%= library.attendant %></td>
+    <td><%= library.phone_number %></td>
+    <td><%= library.address %></td>
+    <td><%= library.zone %></td>
+    <td><%= link_to 'Show', library %></td>
+    <td><%= link_to 'Edit', edit_library_path(library) %></td>
+    <td><%= link_to 'Destroy', library, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Library', new_library_path %>
