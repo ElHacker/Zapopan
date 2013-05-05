@@ -38,6 +38,8 @@ $(document).ready ->
     tagMsg = ""
     if prevMsg is `undefined` or prevMsg is ""
       # First time
+      $("h1.head-quote #message").html("Libros de:")
+      $("h1.head-quote").append("<span id='msg'></span>")
       tagMsg = tagName + " + "
     else
       # Second time
