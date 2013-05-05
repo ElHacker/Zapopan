@@ -26,6 +26,7 @@
       - @book.libraries.each do |library|
         = link_to '#', data: {address: library.google_address}, class: 'library-item' do
           %span.library-title #{library.name}
+    %a#view-library{:href => "#"} Ver Biblioteca
     .library-map
       #map-canvas{style:"width:400px; height:400px;"}
   = link_to 'Edit', edit_book_path(@book)

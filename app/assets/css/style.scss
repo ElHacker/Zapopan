@@ -350,6 +350,10 @@ $brandColor: tomato;
 		display: inline-block;
 		vertical-align: top;
 		margin-left: 40px;
+		height: 400px;
+		overflow: scroll;
+		position: relative;
+
 
 		.library-item {
 			padding: 20px 5px;
