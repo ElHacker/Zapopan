@@ -49,7 +49,6 @@ class BooksController < ApplicationController
 
   def search_with_tags
     @books = Book.tagged_with(params[:tags], any: true)
-    render json: @books
   end
 
 end

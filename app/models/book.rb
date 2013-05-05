@@ -6,6 +6,8 @@ class Book < ActiveRecord::Base
   # Alias for acts_as_taggable "tags"
   acts_as_taggable
 
+  has_and_belongs_to_many :libraries
+
   def self.get_open_library_data(isbn)
     data = Openlibrary::Data
     book = data.find_by_isbn(isbn)
