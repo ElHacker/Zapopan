@@ -4,6 +4,8 @@
 #
 $(document).ready ->
 
+  console.log 'si'
+
   $('#isbn_lookup').on 'ajax:success', (xhr, data, status) ->
     # Insert data into fields
     console.log data
