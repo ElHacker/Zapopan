@@ -18,8 +18,13 @@ $(document).ready( () ->
           position: results[0].geometry.location
         )
 
+
   $(".library-item").on "click", (event) ->
     event.preventDefault()
+    $('.library-item').removeClass('current')
+    $(this).addClass('current')
     address = $(this).data("address")
     codeAddress(address)
+
+  $('.library-item').eq(0).click()
 )
