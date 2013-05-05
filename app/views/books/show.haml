@@ -23,7 +23,7 @@
     %h3 Este libro esta disponible en las siguientes bibliotecas:
     %br
     .items
-      - @book.libraries.each do |library|-
+      - @book.libraries.each do |library|
         = link_to '#', data: {address: library.google_address}, class: 'library-item' do
           %span.library-title #{library.name}
     .library-map
