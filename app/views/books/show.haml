@@ -1,0 +1,39 @@
+.container
+	.bookview
+		%img.book-cover
+		.book-info
+			%p
+				%b Title:
+				= @book.title
+			%p
+				%b Author:
+				= @book.author
+			%p
+				%b Publication date:
+				= @book.publication_date
+			%p
+				%b Editorial:
+				= @book.editorial
+			%p
+				%b Edition:
+				= @book.edition
+			%p
+				%b Isbn:
+				= @book.isbn
+	.libraries
+		%h3 Este libro esta disponible en las siguientes bibliotecas
+		.items
+			%a.library-item{:href => "#"}
+				%span.library-title Biblioteca Pública Municipal  No. 7443 "La Venta del Astillero"
+			%a.library-item{:href => "#"}
+				%span.library-title Biblioteca Pública Municipal  No. 7443 "La Venta del Astillero"
+			%a.library-item{:href => "#"}
+				%span.library-title Biblioteca Pública Municipal  No. 7443 "La Venta del Astillero"
+			%a.library-item{:href => "#"}
+				%span.library-title Biblioteca Pública Municipal  No. 7443 "La Venta del Astillero"
+		.library-map
+			%iframe{:frameborder => "0", :height => "350", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?f=q&source=s_q&hl=es-419&geocode=&q=biblioteca+municipal+zapopan&aq=&sll=37.0625,-95.677068&sspn=45.014453,82.441406&ie=UTF8&hq=biblioteca+municipal&hnear=Zapopan,+Jalisco,+M%C3%A9xico&t=m&cid=8111205969599712135&z=10&iwloc=A&output=embed", :width => "425"}
+			%br/
+	= link_to 'Edit', edit_book_path(@book)
+	|
+	\#{link_to 'Back', books_path}

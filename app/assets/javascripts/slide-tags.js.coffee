@@ -1,5 +1,5 @@
 $(document).ready ->
-  paramTags = ""
+  paramTags = []
   slider = $(".bxslider").bxSlider(
     controls: false
     pager: false
@@ -8,7 +8,7 @@ $(document).ready ->
   # Displays the first three found books using the params tags
   # for a search
   searchBooks = (paramTags) ->
-    searchURL = "books/search_with_tags"
+    searchURL = "books/search_with_tags.json"
     $.get(searchURL, tags: paramTags, (books, textStatus, jqXHR) ->
       book_template = (title, author) -> """
         <a>
@@ -33,17 +33,17 @@ $(document).ready ->
     event.preventDefault()
     $this = $(this)
     tagName = $this.text()
+    paramTags.push tagName
     prevMsg = $("#msg").text()
     tagMsg = ""
     if prevMsg is `undefined` or prevMsg is ""
       # First time
       tagMsg = tagName + " + "
-      paramTags = tagName + ", "
     else
       # Second time
       tagMsg = prevMsg + tagName
-      paramTags += tagName
       searchBooks(paramTags)
+    
     $("#msg").text tagMsg
-    #$(".more-books").attr("href", "books/search_with_tags?tags=#{paramTags}")
+    $(".more-books").attr("href", "books/search_with_tags?tags=#{paramTags}")
     slider.goToNextSlide()

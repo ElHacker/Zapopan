@@ -48,8 +48,12 @@ class BooksController < ApplicationController
   end
 
   def search_with_tags
+    @tags = params[:tags]
     @books = Book.tagged_with(params[:tags], any: true)
-    render json: @books
+    respond_to do |format|
+      format.html 
+      format.json { render json: @books }
+    end
   end
 
 end

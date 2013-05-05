@@ -7,4 +7,11 @@
 		= stylesheet_link_tag    "application", :media => "all"
 		= javascript_include_tag "application"
 	%body
+		.nav
+			.container
+				= link_to "Libroteca"
+				= image_tag "logo-zapopan.png"
+				%nav
+					= link_to "Libros"
+					= link_to "Bibliotecas"
 		= yield
