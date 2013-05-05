@@ -45,3 +45,86 @@ Library.create code: 1423, name: ' Tesistan', phone_number: '38 97 13 60', atten
 Library.create code: 6884, name: ' Tuzania', phone_number: '38 36 92 33', address: 'Cerezos # 1100 Colonia La Tuzania', zone: 'norte', email: 'tuzania@dondeleer.mx', password: '1234568'
 
 Library.create code: 7443, name: ' Venta Del Astillero', phone_number: '31 51 11 32', attendant: 'Antonia Lemus Fourtul', address: 'Hidalgo Esquina Emiliano Zapata Frente A La Del. De La Venta', zone: 'norte', email: 'ventaastillero@dondeleer.mx', password: '1234568'
+
+book1 = Book.new title: 'El principito', author: 'Antoine de Saint-Exupery', editorial: 'Emece', isbn: '9500400480', publication_date:'', tag_list: 'infantil, fantasía'
+book1.libraries << Library.find(1)
+book1.libraries << Library.find(2)
+book1.libraries << Library.find(3)
+book1.save
+
+book2 = Book.new title: '20.000 Leguas de Viaje Submarino', author: 'Jules Verne', editorial: 'Agebe', isbn: '9871165099', publication_date:'2005', tag_list: 'viajes, ciencia ficción'
+book2.libraries << Library.find(2)
+book2.save
+
+book3 = Book.new title: 'Don Quijote', author: 'Museo de Santa Cruz', editorial: 'Sociedad Estatal Para La Accion Cultural Exte', isbn: '8496008789', publication_date:'2005', tag_list: 'viajes'
+book3.libraries << Library.find(3)
+book3.save
+
+book4 = Book.new title: 'Cien aÃ±os de soledad', author: 'Gabriel Garcia Marquez', editorial: 'Vintage EspaÃ±ol', isbn: '0307474720', publication_date:'2009', tag_list: 'drama'
+book4.libraries << Library.find(4)
+book4.save
+
+book5 = Book.new title: 'Como Agua Para Chocolate', author: 'Laura Esquivel', editorial: 'Turtleback Books Distributed by Demco MediaTurtleback Books Distributed by Demco Media', isbn: '0606205128', publication_date:'2001', tag_list: 'drama, romance'
+book5.libraries << Library.find(5)
+book5.save
+
+#book6 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book6.libraries << Library.find()
+#book6.save
+#
+#book7 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book7.libraries << Library.find()
+#book7.save
+#
+#book8 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book8.libraries << Library.find()
+#book8.save
+#
+#book9 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book9.libraries << Library.find()
+#book9.save
+#
+#book10 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book10.libraries << Library.find()
+#book10.save
+#
+#book11 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book11.libraries << Library.find()
+#book11.save
+#
+#book12 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book12.libraries << Library.find()
+#book12.save
+#
+#book13 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book13.libraries << Library.find()
+#book13.save
+#
+#book14 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book14.libraries << Library.find()
+#book14.save
+#
+#book15 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book15.libraries << Library.find()
+#book15.save
+#
+#book16 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book16.libraries << Library.find()
+#book16.save
+#
+#book17 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book17.libraries << Library.find()
+#book17.save
+#
+#book18 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book18.libraries << Library.find()
+#book18.save
+#
+#book19 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book19.libraries << Library.find()
+#book19.save
+#
+#book20 = Book.new title: '', author: '', editorial: '', isbn: '', publication_date:'', tag_list: ''
+#book20.libraries << Library.find()
+#book20.save
+#
