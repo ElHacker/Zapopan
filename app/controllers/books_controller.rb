@@ -46,4 +46,10 @@ class BooksController < ApplicationController
     @book = Book.get_open_library_data(params[:isbn])
     render json: @book
   end
+
+  def search_with_tags
+    @books = Book.tagged_with(params[:tags], any: true)
+    render json: @books
+  end
+
 end

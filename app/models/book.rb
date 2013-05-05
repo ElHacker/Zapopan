@@ -15,4 +15,5 @@ class Book < ActiveRecord::Base
     result[:editorial] = book.publishers.map{|a|a["name"]}.join(",")
     result
   end
+
 end
