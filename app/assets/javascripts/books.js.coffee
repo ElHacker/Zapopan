@@ -8,6 +8,10 @@ $(document).ready ->
     # Insert data into fields
     console.log data
     $('#book_title').val(data.title)
+    $('#book_author').val(data.authors)
+    $('#book_publication_date').val(data.publish_date)
+    $('#book_editorial').val(data.editorial)
+    $('#book_isbn').val($('#isbn').val())
 
 
 
