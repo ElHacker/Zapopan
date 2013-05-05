@@ -43,7 +43,8 @@
   .featured
     %section.books
       - @top_books.each do |book|
-        .book
-          %span.title= book.title
-          %span.author= book.author
+        = link_to book_path(book) do
+          .book
+            %span.title= book.title
+            %span.author= book.author
 
