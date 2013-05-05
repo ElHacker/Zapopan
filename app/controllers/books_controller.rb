@@ -1,5 +1,7 @@
 class BooksController < ApplicationController
 
+  before_filter :authorize, only: [:new, :edit, :update, :create, :destroy]
+
   def index
     @books = Book.all
   end
@@ -18,7 +20,7 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.find_or_initialize_by_isbn(params[:book])
-    @book.libraries << Library.first
+    @book.libraries << current_user
     if @book.save
       redirect_to @book, notice:'Book was successfully created.'
     else
