@@ -1,0 +1,150 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700);
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+* {
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #ecf0f1; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  width: 960px;
+  margin: 0 auto; }
+
+.featured {
+  background: #e5dfb5;
+  padding: 20px 0px; }
+
+.nav {
+  padding: 20px;
+  background: #e74c3c; }
+  .nav .logo {
+    display: inline-block;
+    color: #fff; }
+  .nav nav {
+    display: inline-block;
+    float: right; }
+    .nav nav a {
+      color: #fff;
+      margin-left: 5px; }
+
+.head {
+  background: url(../img/bg-home.jpg) no-repeat top center;
+  background-position: 0px -250px;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  text-shadow: 0px 2px 1px solid rgba(0, 0, 0, 0.5); }
+  .head .head-quote {
+    background: #f1c40f;
+    padding: 30px 0px 5px 0px;
+    position: relative;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: 0px 2px 1px solid rgba(0, 0, 0, 0.5); }
+    .head .head-quote:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: #f1c40f;
+      display: block;
+      position: absolute;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      transform: rotate(45deg);
+      left: 50%;
+      position: relative;
+      top: 10px; }
+    .head .head-quote #msg {
+      background: #fff;
+      border-radius: 2px;
+      padding: 5px;
+      color: #000; }
+  .head a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 300; }
+
+.bx-viewport {
+  margin: 0 auto; }
+  .bx-viewport li .tag {
+    padding: 10px;
+    color: #000;
+    background: #ecf0f1;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5); }
+    .bx-viewport li .tag:hover {
+      cursor: pointer;
+      opacity: 0.8; }
+
+.books {
+  margin: 30px auto;
+  width: 800px;
+  display: block; }
+  .books .book {
+    background: #2c3e50;
+    width: 135px;
+    height: 200px;
+    display: inline-block;
+    border-left: 15px solid black;
+    border-radius: 3px;
+    box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    position: relative;
+    margin-left: 20px; }
+    .books .book:hover {
+      -webkit-transform: rotate(5deg);
+      cursor: pointer; }
+    .books .book .title {
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      display: block;
+      padding-top: 50px; }
+
+.books.recomendations {
+  margin: -70px auto !important;
+  width: 800px; }
+
+.bar {
+  background: #252525;
+  padding: 20px 0px;
+  color: #fff; }
+
+.bookslist {
+  margin: 0px auto;
+  width: 800px; }
+  .bookslist .book {
+    background: tomato;
+    width: 135px;
+    height: 200px;
+    display: inline-block;
+    border-left: 15px solid black;
+    border-radius: 3px;
+    box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    position: relative;
+    margin-left: 20px; }
+    .bookslist .book:hover {
+      -webkit-transform: rotate(5deg);
+      cursor: pointer; }
+    .bookslist .book .title {
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      display: block;
+      padding-top: 50px; }

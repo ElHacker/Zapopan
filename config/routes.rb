@@ -9,6 +9,6 @@ Zapopan::Application.routes.draw do
     end
   end
 
-  root :to => 'books#new'
+  root :to => 'pages#home'
 
 end
